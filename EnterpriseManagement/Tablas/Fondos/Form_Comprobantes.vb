@@ -4,4 +4,7 @@
         Int_VentanaFondos_Comprobantes = 0
     End Sub
 
+    Private Sub Form_Comprobantes_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'BARNCH PRUEBA
+    End Sub
 End Class
