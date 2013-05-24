@@ -1,0 +1,71 @@
+﻿Imports System.Data.SqlClient
+
+Public Class Form_ConsultaProveedores
+
+    Private Sub Form_ConceptosFacturables_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        Int_VentanaConsultas_ConsultaProveedores = 0
+    End Sub
+
+    Private Sub btn_Buscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Buscar.Click
+        Dim Cadena As String = FiltroSQL()
+        Dim strSQL As New SqlDataAdapter(Cadena, SQLProvider.ConnectionString), ds As New DataSet
+        strSQL.Fill(ds)
+        LimpiarDG(DG_ConsultaProveedores)
+        DG_ConsultaProveedores.DataSource = ds.Tables(0)
+        ImeC = 1
+    End Sub
+
+    Public Function FiltroSQL()
+        Dim SQLstring As String = ""
+        If Trim(DD_Codigo.Text) <> "" Then
+            SQLstring = "Select NUM_PROV, RAZON, NOM_FANTASIA, DOMICILIO, CUIT, FECHA_ALTA, ESTADO From PROVEEDORES where NUM_PROV = " & Val(DD_Codigo.Text)
+        End If
+
+        If Trim(tb_NombreFantasia.Text) <> "" Then
+            If Trim(SQLstring) <> "" Then
+                SQLstring = SQLstring & " and NOM_FANTASIA Like '%" & Trim(tb_NombreFantasia.Text) & "%'"
+            Else
+                SQLstring = "Select NUM_PROV, RAZON, NOM_FANTASIA, DOMICILIO, CUIT, FECHA_ALTA, ESTADO From PROVEEDORES where NOM_FANTASIA Like '%" & Trim(tb_NombreFantasia.Text) & "%'"
+            End If
+        End If
+
+        If Trim(tb_RazonSocial.Text) <> "" Then
+            If Trim(SQLstring) <> "" Then
+                SQLstring = SQLstring & " and RAZON like '%" & Trim(tb_RazonSocial.Text) & "%'"
+            Else
+                SQLstring = "Select NUM_PROV, RAZON, NOM_FANTASIA, DOMICILIO, CUIT, FECHA_ALTA, ESTADO From PROVEEDORES where RAZON Like '%" & Trim(tb_RazonSocial.Text) & "%'"
+            End If
+        End If
+
+        If Trim(SQLstring) = "" Then
+            SQLstring = "Select NUM_PROV, RAZON, NOM_FANTASIA, DOMICILIO, CUIT, FECHA_ALTA, ESTADO From PROVEEDORES"
+        End If
+
+        Return SQLstring
+    End Function
+
+    Private Sub Form_ConsultaProveedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        oConsultaProveedores.CargarDD_Codigo(DD_Codigo)
+    End Sub
+
+    Private Sub btn_Limpiar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Limpiar.Click
+        tb_NombreFantasia.Text = ""
+        tb_RazonSocial.Text = ""
+        DD_Codigo.Text = ""
+        LimpiarDG(DG_ConsultaProveedores)
+        ImeC = 0
+    End Sub
+
+    Private Sub DG_ConsultaProveedores_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DG_ConsultaProveedores.DoubleClick
+        If ImeC = 1 Then
+            strNumero = DG_ConsultaProveedores.CurrentRow.Cells(0).EditedFormattedValue.ToString
+            strRazon = DG_ConsultaProveedores.CurrentRow.Cells(1).EditedFormattedValue.ToString
+            strFantasia = DG_ConsultaProveedores.CurrentRow.Cells(2).EditedFormattedValue.ToString
+            strDomicilio = DG_ConsultaProveedores.CurrentRow.Cells(3).EditedFormattedValue.ToString
+            strCUIT = DG_ConsultaProveedores.CurrentRow.Cells(4).EditedFormattedValue.ToString
+            strEstado = DG_ConsultaProveedores.CurrentRow.Cells(6).EditedFormattedValue.ToString
+            Im = 1
+            Formulario.ProveedoresToolStripMenuItem3_Click(Nothing, Nothing)
+        End If
+    End Sub
+End Class
