@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class oCuentasBancarias
-
+    'Cuentas bancarias
     Shared Sub CargarDG_CuentasBancarias(ByVal DG As DataGridView)
         Dim strSQL As New SqlDataAdapter("Select CODI_BANCO, CUENTA_NUM, CBU, CUENTA_TIPO, MONE, INACTIVA, TIPO_FF From BANCOS_CUENTAS", SQLProvider.ConnectionString), ds As New DataSet
         strSQL.Fill(ds)
