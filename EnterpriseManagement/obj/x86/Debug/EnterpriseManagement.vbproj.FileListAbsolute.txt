@@ -15,3 +15,6 @@ C:\DesarrollosNET\EnterpriseManagement\EnterpriseManagement\obj\x86\Debug\Enterp
 C:\DesarrollosNET\EnterpriseManagement\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.Form_ConceptosFacturables.resources
 C:\DesarrollosNET\EnterpriseManagement\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.Form_Proveedores.resources
 C:\DesarrollosNET\EnterpriseManagement\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.Form_ConsultaProveedores.resources
+C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.exe
+C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.xml
+C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.pdb
