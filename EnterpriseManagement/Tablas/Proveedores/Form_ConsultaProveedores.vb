@@ -68,4 +68,5 @@ Public Class Form_ConsultaProveedores
             Formulario.ProveedoresToolStripMenuItem3_Click(Nothing, Nothing)
         End If
     End Sub
+
 End Class

@@ -4,6 +4,7 @@ Public Class Form_Proveedores
 
     Public Sub Form_Proveedores_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         Int_VentanaProveedores_Proveedores = 0
+        Im = 0
     End Sub
 
     Private Sub btn_Buscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Buscar.Click
@@ -67,7 +68,7 @@ Public Class Form_Proveedores
         End If
     End Sub
 
-    Private Sub Form_Proveedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Public Sub Form_Proveedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         PonerUltimoNumero()
         If Im = 1 Then
             tb_Numero.Text = strNumero
@@ -76,7 +77,6 @@ Public Class Form_Proveedores
             tb_Domicilio.Text = strDomicilio
             tb_CUIT.Text = strCUIT
             DD_Estado.Text = strEstado
-            Im = 0
         End If
     End Sub
 
