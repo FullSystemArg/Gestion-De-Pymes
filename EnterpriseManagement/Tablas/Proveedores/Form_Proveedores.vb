@@ -45,10 +45,9 @@ Public Class Form_Proveedores
             Dim strSQL As String = "INSERT INTO PROVEEDORES " _
                                     & "(NUM_PROV, RAZON, NOM_FANTASIA, DOMICILIO, CUIT, ESTADO) VALUES " _
                                     & "(" & Val(tb_Numero.Text) & ",'" & Trim(tb_RazonSocial.Text) & "','" & Trim(tb_NombreFantasia.Text) & "','" & Trim(tb_Domicilio.Text) & "','" & Trim(tb_CUIT.Text) & "','" & Trim(DD_Estado.Text) & "');"
-            Dim datSQL As New SqlDataAdapter("Select NUM_PROV from PROVEEDORES where NUM_PROV = " & Val(tb_Numero.Text), SQLProvider.ConnectionString), ds As New DataSet
-            datSQL.Fill(ds)
+            Dim Cadena As String = ("Select NUM_PROV from PROVEEDORES where NUM_PROV = " & Val(tb_Numero.Text))
             LimpiarDG(DgD)
-            DgD.DataSource = ds.Tables(0)
+            DgD.DataSource = SqlHelper.ExecuteDataset(SQLProvider.ConnectionString, CommandType.Text, Cadena).Tables(0)
             If DgD.Rows.Count > 0 Then
                 Mensaje(4)
                 If Msg = vbOK Then SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, "UPDATE PROVEEDORES SET NUM_PROV = " & Val(tb_Numero.Text) & ", RAZON = '" & Trim(tb_RazonSocial.Text) & "', NOM_FANTASIA = '" & Trim(tb_NombreFantasia.Text) & "', DOMICILIO = '" & Trim(tb_Domicilio.Text) & "', CUIT = '" & Trim(tb_CUIT.Text) & "', ESTADO = '" & Trim(DD_Estado.Text) & "' WHERE NUM_PROV = " & Val(tb_Numero.Text))
