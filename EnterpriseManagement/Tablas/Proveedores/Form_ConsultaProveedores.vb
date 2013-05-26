@@ -4,15 +4,12 @@ Public Class Form_ConsultaProveedores
 
     Private Sub Form_ConceptosFacturables_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         Int_VentanaConsultas_ConsultaProveedores = 0
+        ImeC = 0
     End Sub
 
     Private Sub btn_Buscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Buscar.Click
         Dim Cadena As String = FiltroSQL()
-        Dim strSQL As New SqlDataAdapter(Cadena, SQLProvider.ConnectionString), ds As New DataSet
-        strSQL.Fill(ds)
-        LimpiarDG(DG_ConsultaProveedores)
-        DG_ConsultaProveedores.DataSource = ds.Tables(0)
-        ImeC = 1
+        oConsultaProveedores.CargarDG_ConsultaProveedores(DG_ConsultaProveedores, Cadena)
     End Sub
 
     Public Function FiltroSQL()
@@ -57,16 +54,7 @@ Public Class Form_ConsultaProveedores
     End Sub
 
     Private Sub DG_ConsultaProveedores_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DG_ConsultaProveedores.DoubleClick
-        If ImeC = 1 Then
-            strNumero = DG_ConsultaProveedores.CurrentRow.Cells(0).EditedFormattedValue.ToString
-            strRazon = DG_ConsultaProveedores.CurrentRow.Cells(1).EditedFormattedValue.ToString
-            strFantasia = DG_ConsultaProveedores.CurrentRow.Cells(2).EditedFormattedValue.ToString
-            strDomicilio = DG_ConsultaProveedores.CurrentRow.Cells(3).EditedFormattedValue.ToString
-            strCUIT = DG_ConsultaProveedores.CurrentRow.Cells(4).EditedFormattedValue.ToString
-            strEstado = DG_ConsultaProveedores.CurrentRow.Cells(6).EditedFormattedValue.ToString
-            Im = 1
-            Formulario.ProveedoresToolStripMenuItem3_Click(Nothing, Nothing)
-        End If
+        oConsultaProveedores.MostrarProveedor(DG_ConsultaProveedores)
     End Sub
 
 End Class

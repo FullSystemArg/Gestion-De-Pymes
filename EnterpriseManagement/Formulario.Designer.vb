@@ -69,7 +69,7 @@ Partial Class Formulario
         '
         Me.FondosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ComprobantesToolStripMenuItem, Me.ConceptosToolStripMenuItem, Me.CuentasBancariasFondosFIjosToolStripMenuItem})
         Me.FondosToolStripMenuItem.Name = "FondosToolStripMenuItem"
-        Me.FondosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.FondosToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.FondosToolStripMenuItem.Text = "Fondos"
         '
         'ComprobantesToolStripMenuItem
@@ -93,14 +93,14 @@ Partial Class Formulario
         'GeneralesToolStripMenuItem
         '
         Me.GeneralesToolStripMenuItem.Name = "GeneralesToolStripMenuItem"
-        Me.GeneralesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.GeneralesToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.GeneralesToolStripMenuItem.Text = "Generales"
         '
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProveedoresToolStripMenuItem3, Me.ConToolStripMenuItem, Me.ConsultaProveedoresToolStripMenuItem1})
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'ProveedoresToolStripMenuItem3
@@ -124,19 +124,19 @@ Partial Class Formulario
         'VentasToolStripMenuItem
         '
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.VentasToolStripMenuItem.Text = "Ventas"
         '
         'StockToolStripMenuItem
         '
         Me.StockToolStripMenuItem.Name = "StockToolStripMenuItem"
-        Me.StockToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.StockToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.StockToolStripMenuItem.Text = "Stock"
         '
         'AdministracionToolStripMenuItem
         '
         Me.AdministracionToolStripMenuItem.Name = "AdministracionToolStripMenuItem"
-        Me.AdministracionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AdministracionToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.AdministracionToolStripMenuItem.Text = "Administracion"
         '
         'HerramientasToolStripMenuItem

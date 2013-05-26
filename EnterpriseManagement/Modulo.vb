@@ -1,6 +1,16 @@
 ﻿Module Modulo
 
-    'Proveedores
+    'Variables Generales
+    Public Msg As String
+    Public Tbnumero As String
+    Public Int_VentanaFondos_Comprobantes As Integer = 0
+    Public Int_VentanaFondos_Conceptos As Integer = 0
+    Public Int_VentanaFondos_CuentasBancarias As Integer = 0
+    Public Int_VentanaProveedores_Proveedores As Integer = 0
+    Public Int_VentanaProveedores_ConceptosFacturables As Integer = 0
+    Public Int_VentanaConsultas_ConsultaProveedores As Integer = 0
+
+    'Variables para Proveedores
     Public ImeC As Integer
     Public Im As Integer
     Public strNumero As String
@@ -10,17 +20,6 @@
     Public strEstado As String
     Public strDomicilio As String
     Public strCP As String
-
-    Public Msg As String
-    Public Tbnumero As String
-    Public Int_VentanaFondos_Comprobantes As Integer = 0
-    Public Int_VentanaFondos_Conceptos As Integer = 0
-    Public Int_VentanaFondos_CuentasBancarias As Integer = 0
-    Public Int_VentanaProveedores_Proveedores As Integer = 0
-    Public Int_VentanaProveedores_ConceptosFacturables As Integer = 0
-
-    Public Int_VentanaConsultas_ConsultaProveedores As Integer = 0
-
 
     Public Sub Mensaje(ByVal Id As Integer)
         Select Case Id
