@@ -2,6 +2,8 @@
 
 Public Class oConsultaProveedores
 
+#Region "Consultas"
+
     Shared Sub CargarDD_Codigo(ByVal DD As ComboBox)
         Dim strSQL As New SqlDataAdapter("Select NUM_PROV From PROVEEDORES", SQLProvider.ConnectionString), ds As New DataSet
         strSQL.Fill(ds)
@@ -29,5 +31,24 @@ Public Class oConsultaProveedores
             Formulario.ProveedoresToolStripMenuItem3_Click(Nothing, Nothing)
         End If
     End Sub
+
+#End Region
+
+#Region "Proveedores"
+
+    Shared Sub Eliminar_Proveedor(ByVal Tnumero As Integer, ByVal DgD As DataGridView)
+        If Tnumero <> "" Then
+            LimpiarDG(DgD)
+            DgD.DataSource = SqlHelper.ExecuteDataset(SQLProvider.ConnectionString, CommandType.Text, ("Select NUM_PROV from PROVEEDORES where NUM_PROV = " & Trim(Tnumero))).Tables(0)
+            If DgD.Rows.Count > 0 Then
+                Mensaje(6)
+                If Msg = vbOK Then SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, "Delete From PROVEEDORES Where NUM_PROV = '" & Trim(Tnumero) & "'")
+            End If
+        Else
+            Mensaje(3)
+        End If
+    End Sub
+
+#End Region
 
 End Class

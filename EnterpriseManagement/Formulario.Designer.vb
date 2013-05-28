@@ -46,6 +46,8 @@ Partial Class Formulario
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TemasDeAyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ArticulosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AltaDeStockToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -69,7 +71,7 @@ Partial Class Formulario
         '
         Me.FondosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ComprobantesToolStripMenuItem, Me.ConceptosToolStripMenuItem, Me.CuentasBancariasFondosFIjosToolStripMenuItem})
         Me.FondosToolStripMenuItem.Name = "FondosToolStripMenuItem"
-        Me.FondosToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.FondosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.FondosToolStripMenuItem.Text = "Fondos"
         '
         'ComprobantesToolStripMenuItem
@@ -93,14 +95,14 @@ Partial Class Formulario
         'GeneralesToolStripMenuItem
         '
         Me.GeneralesToolStripMenuItem.Name = "GeneralesToolStripMenuItem"
-        Me.GeneralesToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.GeneralesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.GeneralesToolStripMenuItem.Text = "Generales"
         '
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProveedoresToolStripMenuItem3, Me.ConToolStripMenuItem, Me.ConsultaProveedoresToolStripMenuItem1})
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'ProveedoresToolStripMenuItem3
@@ -124,19 +126,20 @@ Partial Class Formulario
         'VentasToolStripMenuItem
         '
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.VentasToolStripMenuItem.Text = "Ventas"
         '
         'StockToolStripMenuItem
         '
+        Me.StockToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArticulosToolStripMenuItem, Me.AltaDeStockToolStripMenuItem})
         Me.StockToolStripMenuItem.Name = "StockToolStripMenuItem"
-        Me.StockToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.StockToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.StockToolStripMenuItem.Text = "Stock"
         '
         'AdministracionToolStripMenuItem
         '
         Me.AdministracionToolStripMenuItem.Name = "AdministracionToolStripMenuItem"
-        Me.AdministracionToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.AdministracionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AdministracionToolStripMenuItem.Text = "Administracion"
         '
         'HerramientasToolStripMenuItem
@@ -195,6 +198,18 @@ Partial Class Formulario
         Me.TemasDeAyudaToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
         Me.TemasDeAyudaToolStripMenuItem.Text = "Temas De Ayuda"
         '
+        'ArticulosToolStripMenuItem
+        '
+        Me.ArticulosToolStripMenuItem.Name = "ArticulosToolStripMenuItem"
+        Me.ArticulosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ArticulosToolStripMenuItem.Text = "Articulos"
+        '
+        'AltaDeStockToolStripMenuItem
+        '
+        Me.AltaDeStockToolStripMenuItem.Name = "AltaDeStockToolStripMenuItem"
+        Me.AltaDeStockToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AltaDeStockToolStripMenuItem.Text = "Alta De Stock"
+        '
         'Formulario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -236,5 +251,7 @@ Partial Class Formulario
     Friend WithEvents ProveedoresToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConsultaProveedoresToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ArticulosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AltaDeStockToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

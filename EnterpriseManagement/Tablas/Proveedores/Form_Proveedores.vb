@@ -7,6 +7,33 @@ Public Class Form_Proveedores
         Im = 0
     End Sub
 
+    Private Sub Form_Proveedores_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
+        If e.KeyChar = ChrW(Keys.Enter) Then
+            e.Handled = True
+            SendKeys.Send("{TAB}")
+        End If
+    End Sub
+
+    Public Sub Form_Proveedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        PonerUltimoNumero()
+        If Im = 1 Then
+            tb_Numero.Text = strNumero
+            tb_RazonSocial.Text = strRazon
+            tb_NombreFantasia.Text = strFantasia
+            tb_Domicilio.Text = strDomicilio
+            tb_CUIT.Text = strCUIT
+            DD_Estado.Text = strEstado
+        End If
+    End Sub
+
+    Sub PonerUltimoNumero()
+        Dim Valor As Integer
+        LimpiarDG(DgD)
+        DgD.DataSource = SqlHelper.ExecuteDataset(SQLProvider.ConnectionString, CommandType.Text, "SELECT NUM_PROV FROM PROVEEDORES").Tables(0)
+        Valor = DgD.Rows.Count + 1
+        tb_Numero.Text = Valor
+    End Sub
+
     Private Sub btn_Buscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Buscar.Click
         Formulario.ConsultaProveedoresToolStripMenuItem1_Click(Nothing, Nothing)
     End Sub
@@ -22,9 +49,8 @@ Public Class Form_Proveedores
         cb_Obligatoria.Checked = False
     End Sub
 
-    Private Sub tb_Fecha_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles tb_Fecha.GotFocus
-        MonthCalendar1.Visible = True
-    End Sub
+
+#Region "Calendario"
 
     Private Sub tb_Fecha_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles tb_Fecha.LostFocus
         MonthCalendar1.Visible = False
@@ -37,6 +63,19 @@ Public Class Form_Proveedores
     Private Sub MonthCalendar1_DateSelected(ByVal sender As Object, ByVal e As System.Windows.Forms.DateRangeEventArgs) Handles MonthCalendar1.DateSelected
         tb_Fecha.Text = MonthCalendar1.SelectionRange.Start.ToString
         MonthCalendar1.Visible = True
+    End Sub
+
+    Private Sub tb_Fecha_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles tb_Fecha.GotFocus
+        MonthCalendar1.Visible = True
+    End Sub
+
+#End Region
+
+#Region "ABM"
+
+    Private Sub btn_Eliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Eliminar.Click
+        Dim TNumero As Integer = tb_Numero.Text
+        oConsultaProveedores.Eliminar_Proveedor(TNumero, DgD)
     End Sub
 
     Private Sub btn_Grabar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Grabar.Click
@@ -60,49 +99,6 @@ Public Class Form_Proveedores
         End If
     End Sub
 
-    Private Sub Form_Proveedores_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
-        If e.KeyChar = ChrW(Keys.Enter) Then
-            e.Handled = True
-            SendKeys.Send("{TAB}")
-        End If
-    End Sub
+#End Region
 
-    Public Sub Form_Proveedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        PonerUltimoNumero()
-        If Im = 1 Then
-            tb_Numero.Text = strNumero
-            tb_RazonSocial.Text = strRazon
-            tb_NombreFantasia.Text = strFantasia
-            tb_Domicilio.Text = strDomicilio
-            tb_CUIT.Text = strCUIT
-            DD_Estado.Text = strEstado
-        End If
-    End Sub
-
-    Sub PonerUltimoNumero()
-        Dim Valor As Integer
-        Dim strSQL As New SqlDataAdapter("SELECT NUM_PROV FROM PROVEEDORES", SQLProvider.ConnectionString), ds As New DataSet
-        strSQL.Fill(ds)
-        LimpiarDG(DgD)
-        DgD.DataSource = ds.Tables(0)
-        Valor = DgD.Rows.Count + 1
-        tb_Numero.Text = Valor
-    End Sub
-
-    Private Sub btn_Eliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Eliminar.Click
-        If tb_Numero.Text <> "" Then
-            Tbnumero = tb_Numero.Text
-            Dim datSQL As New SqlDataAdapter("Select NUM_PROV from PROVEEDORES where NUM_PROV = " & Val(tb_Numero.Text), SQLProvider.ConnectionString), ds As New DataSet
-            datSQL.Fill(ds)
-            LimpiarDG(DgD)
-            DgD.DataSource = ds.Tables(0)
-            If DgD.Rows.Count > 0 Then
-                Mensaje(6)
-                If Msg = vbOK Then SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, "Delete From PROVEEDORES Where NUM_PROV = '" & Trim(tb_Numero.Text) & "'")
-            End If
-        Else
-            Mensaje(3)
-        End If
-
-    End Sub
 End Class

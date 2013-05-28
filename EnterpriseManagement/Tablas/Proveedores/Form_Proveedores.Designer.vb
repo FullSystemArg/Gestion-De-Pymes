@@ -88,7 +88,7 @@ Partial Class Form_Proveedores
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(24, 149)
+        Me.Label10.Location = New System.Drawing.Point(24, 144)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(75, 13)
         Me.Label10.TabIndex = 9
@@ -220,7 +220,7 @@ Partial Class Form_Proveedores
         '
         'MonthCalendar1
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(292, -1)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(309, -2)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 31
         Me.MonthCalendar1.Visible = False
