@@ -106,17 +106,17 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Tablas\Artículos\Form_Articulos.Designer.vb">
+      <DependentUpon>Form_Articulos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas\Artículos\Form_Articulos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Tablas\Proveedores\oConsultaProveedores.vb" />
     <Compile Include="Tablas\Proveedores\Form_ConsultaProveedores.Designer.vb">
       <DependentUpon>Form_ConsultaProveedores.vb</DependentUpon>
     </Compile>
     <Compile Include="Tablas\Proveedores\Form_ConsultaProveedores.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tablas\Proveedores\Form_ConceptosFacturables.Designer.vb">
-      <DependentUpon>Form_ConceptosFacturables.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Tablas\Proveedores\Form_ConceptosFacturables.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modulo.vb" />
@@ -133,18 +133,6 @@
       <DependentUpon>Form_CuentasBancarias.vb</DependentUpon>
     </Compile>
     <Compile Include="Tablas\Fondos\Form_CuentasBancarias.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tablas\Fondos\Form_Conceptos.Designer.vb">
-      <DependentUpon>Form_Conceptos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Tablas\Fondos\Form_Conceptos.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tablas\Fondos\Form_Comprobantes.Designer.vb">
-      <DependentUpon>Form_Comprobantes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Tablas\Fondos\Form_Comprobantes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formulario.vb">
@@ -171,23 +159,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Tablas\Artículos\Form_Articulos.resx">
+      <DependentUpon>Form_Articulos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tablas\Proveedores\Form_ConsultaProveedores.resx">
       <DependentUpon>Form_ConsultaProveedores.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tablas\Proveedores\Form_ConceptosFacturables.resx">
-      <DependentUpon>Form_ConceptosFacturables.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tablas\Proveedores\Form_Proveedores.resx">
       <DependentUpon>Form_Proveedores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tablas\Fondos\Form_CuentasBancarias.resx">
       <DependentUpon>Form_CuentasBancarias.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tablas\Fondos\Form_Conceptos.resx">
-      <DependentUpon>Form_Conceptos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tablas\Fondos\Form_Comprobantes.resx">
-      <DependentUpon>Form_Comprobantes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario.resx">
       <DependentUpon>Formulario.vb</DependentUpon>

@@ -44,32 +44,9 @@ Public Class Form_Proveedores
         tb_Cp.Text = ""
         tb_CUIT.Text = ""
         tb_Domicilio.Text = ""
-        tb_Fecha.Text = ""
         tb_NombreFantasia.Text = ""
         cb_Obligatoria.Checked = False
     End Sub
-
-
-#Region "Calendario"
-
-    Private Sub tb_Fecha_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles tb_Fecha.LostFocus
-        MonthCalendar1.Visible = False
-    End Sub
-
-    Private Sub MonthCalendar1_DateChanged(ByVal sender As Object, ByVal e As System.Windows.Forms.DateRangeEventArgs) Handles MonthCalendar1.DateChanged
-        MonthCalendar1.Visible = True
-    End Sub
-
-    Private Sub MonthCalendar1_DateSelected(ByVal sender As Object, ByVal e As System.Windows.Forms.DateRangeEventArgs) Handles MonthCalendar1.DateSelected
-        tb_Fecha.Text = MonthCalendar1.SelectionRange.Start.ToString
-        MonthCalendar1.Visible = True
-    End Sub
-
-    Private Sub tb_Fecha_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles tb_Fecha.GotFocus
-        MonthCalendar1.Visible = True
-    End Sub
-
-#End Region
 
 #Region "ABM"
 

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form_Comprobantes
+Partial Class Form_Articulos
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -24,14 +24,13 @@ Partial Class Form_Comprobantes
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'Form_Comprobantes
+        'Form_Articulos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(589, 496)
-        Me.MaximizeBox = False
-        Me.Name = "Form_Comprobantes"
-        Me.Text = "Comprobantes"
+        Me.ClientSize = New System.Drawing.Size(659, 389)
+        Me.Name = "Form_Articulos"
+        Me.Text = "Form_Articulos"
         Me.ResumeLayout(False)
 
     End Sub

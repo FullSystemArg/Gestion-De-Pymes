@@ -32,3 +32,6 @@ C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\De
 C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.Resources.resources
 C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Administrador\Mis documentos\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.exe
+C:\Documents and Settings\Administrador\Mis documentos\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.xml
+C:\Documents and Settings\Administrador\Mis documentos\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.pdb

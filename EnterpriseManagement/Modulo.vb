@@ -3,11 +3,8 @@
     'Variables Generales
     Public Msg As String
     Public Tbnumero As String
-    Public Int_VentanaFondos_Comprobantes As Integer = 0
-    Public Int_VentanaFondos_Conceptos As Integer = 0
     Public Int_VentanaFondos_CuentasBancarias As Integer = 0
     Public Int_VentanaProveedores_Proveedores As Integer = 0
-    Public Int_VentanaProveedores_ConceptosFacturables As Integer = 0
     Public Int_VentanaConsultas_ConsultaProveedores As Integer = 0
 
     'Variables para Proveedores

@@ -27,9 +27,7 @@ Partial Class Form_Proveedores
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.cb_Obligatoria = New System.Windows.Forms.CheckBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.btn_Limpiar = New System.Windows.Forms.Button()
@@ -43,8 +41,6 @@ Partial Class Form_Proveedores
         Me.tb_Cp = New System.Windows.Forms.TextBox()
         Me.tb_CUIT = New System.Windows.Forms.TextBox()
         Me.DD_Estado = New System.Windows.Forms.ComboBox()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.tb_Fecha = New System.Windows.Forms.TextBox()
         Me.DgD = New System.Windows.Forms.DataGridView()
         CType(Me.DgD, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -85,15 +81,6 @@ Partial Class Form_Proveedores
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Domicilio"
         '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(24, 144)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(75, 13)
-        Me.Label10.TabIndex = 9
-        Me.Label10.Text = "Fecha De Alta"
-        '
         'Label11
         '
         Me.Label11.AutoSize = True
@@ -102,16 +89,6 @@ Partial Class Form_Proveedores
         Me.Label11.Size = New System.Drawing.Size(40, 13)
         Me.Label11.TabIndex = 10
         Me.Label11.Text = "Estado"
-        '
-        'cb_Obligatoria
-        '
-        Me.cb_Obligatoria.AutoSize = True
-        Me.cb_Obligatoria.Location = New System.Drawing.Point(333, 145)
-        Me.cb_Obligatoria.Name = "cb_Obligatoria"
-        Me.cb_Obligatoria.Size = New System.Drawing.Size(164, 17)
-        Me.cb_Obligatoria.TabIndex = 11
-        Me.cb_Obligatoria.Text = "Orden De Compra Obligatoria"
-        Me.cb_Obligatoria.UseVisualStyleBackColor = True
         '
         'Label12
         '
@@ -134,7 +111,7 @@ Partial Class Form_Proveedores
         'btn_Limpiar
         '
         Me.btn_Limpiar.Image = CType(resources.GetObject("btn_Limpiar.Image"), System.Drawing.Image)
-        Me.btn_Limpiar.Location = New System.Drawing.Point(12, 187)
+        Me.btn_Limpiar.Location = New System.Drawing.Point(12, 151)
         Me.btn_Limpiar.Name = "btn_Limpiar"
         Me.btn_Limpiar.Size = New System.Drawing.Size(36, 37)
         Me.btn_Limpiar.TabIndex = 16
@@ -142,7 +119,7 @@ Partial Class Form_Proveedores
         '
         'btn_Eliminar
         '
-        Me.btn_Eliminar.Location = New System.Drawing.Point(405, 193)
+        Me.btn_Eliminar.Location = New System.Drawing.Point(405, 157)
         Me.btn_Eliminar.Name = "btn_Eliminar"
         Me.btn_Eliminar.Size = New System.Drawing.Size(75, 24)
         Me.btn_Eliminar.TabIndex = 15
@@ -151,7 +128,7 @@ Partial Class Form_Proveedores
         '
         'btn_Grabar
         '
-        Me.btn_Grabar.Location = New System.Drawing.Point(483, 193)
+        Me.btn_Grabar.Location = New System.Drawing.Point(483, 157)
         Me.btn_Grabar.Name = "btn_Grabar"
         Me.btn_Grabar.Size = New System.Drawing.Size(75, 24)
         Me.btn_Grabar.TabIndex = 14
@@ -161,7 +138,7 @@ Partial Class Form_Proveedores
         'btn_Buscar
         '
         Me.btn_Buscar.Image = CType(resources.GetObject("btn_Buscar.Image"), System.Drawing.Image)
-        Me.btn_Buscar.Location = New System.Drawing.Point(54, 187)
+        Me.btn_Buscar.Location = New System.Drawing.Point(54, 151)
         Me.btn_Buscar.Name = "btn_Buscar"
         Me.btn_Buscar.Size = New System.Drawing.Size(36, 37)
         Me.btn_Buscar.TabIndex = 18
@@ -218,20 +195,6 @@ Partial Class Form_Proveedores
         Me.DD_Estado.Size = New System.Drawing.Size(164, 21)
         Me.DD_Estado.TabIndex = 30
         '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(309, -2)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 31
-        Me.MonthCalendar1.Visible = False
-        '
-        'tb_Fecha
-        '
-        Me.tb_Fecha.Location = New System.Drawing.Point(116, 141)
-        Me.tb_Fecha.Name = "tb_Fecha"
-        Me.tb_Fecha.Size = New System.Drawing.Size(164, 20)
-        Me.tb_Fecha.TabIndex = 32
-        '
         'DgD
         '
         Me.DgD.AllowUserToAddRows = False
@@ -248,10 +211,8 @@ Partial Class Form_Proveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(564, 234)
+        Me.ClientSize = New System.Drawing.Size(564, 197)
         Me.Controls.Add(Me.DgD)
-        Me.Controls.Add(Me.tb_Fecha)
-        Me.Controls.Add(Me.MonthCalendar1)
         Me.Controls.Add(Me.DD_Estado)
         Me.Controls.Add(Me.tb_CUIT)
         Me.Controls.Add(Me.tb_Cp)
@@ -265,9 +226,7 @@ Partial Class Form_Proveedores
         Me.Controls.Add(Me.btn_Grabar)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.cb_Obligatoria)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -285,9 +244,7 @@ Partial Class Form_Proveedores
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents cb_Obligatoria As System.Windows.Forms.CheckBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents btn_Limpiar As System.Windows.Forms.Button
@@ -301,7 +258,5 @@ Partial Class Form_Proveedores
     Friend WithEvents tb_Cp As System.Windows.Forms.TextBox
     Friend WithEvents tb_CUIT As System.Windows.Forms.TextBox
     Friend WithEvents DD_Estado As System.Windows.Forms.ComboBox
-    Friend WithEvents MonthCalendar1 As System.Windows.Forms.MonthCalendar
-    Friend WithEvents tb_Fecha As System.Windows.Forms.TextBox
     Friend WithEvents DgD As System.Windows.Forms.DataGridView
 End Class

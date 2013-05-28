@@ -1,6 +1,6 @@
 ﻿Public Class Formulario
 
-    Private Sub ComprobantesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComprobantesToolStripMenuItem.Click
+    Private Sub ComprobantesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If Int_VentanaFondos_Comprobantes = 0 Then
             Dim Frm_Comprobantes As New Form_Comprobantes
             Frm_Comprobantes.MdiParent = Me
@@ -11,7 +11,7 @@
         End If
     End Sub
 
-    Private Sub ConceptosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConceptosToolStripMenuItem.Click
+    Private Sub ConceptosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If Int_VentanaFondos_Conceptos = 0 Then
             Dim frm_Conceptos As New Form_Conceptos
             frm_Conceptos.MdiParent = Me
@@ -50,17 +50,6 @@
         End If
     End Sub
 
-    Public Sub ConToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConToolStripMenuItem.Click
-        If Int_VentanaProveedores_ConceptosFacturables = 0 Then
-            Dim Frm_ConceptosFacturables As New Form_ConceptosFacturables
-            Frm_ConceptosFacturables.MdiParent = Me
-            Frm_ConceptosFacturables.Show()
-            Int_VentanaProveedores_ConceptosFacturables = 1
-        Else
-            Mensaje(1)
-        End If
-    End Sub
-
     Public Sub ConsultaProveedoresToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConsultaProveedoresToolStripMenuItem1.Click
         If Int_VentanaConsultas_ConsultaProveedores = 0 Then
             Dim Frm_ConsultaProveedores As New Form_ConsultaProveedores
@@ -71,4 +60,5 @@
             Mensaje(1)
         End If
     End Sub
+
 End Class
