@@ -38,19 +38,21 @@ Partial Class Form_ConsultaProveedores
         'btn_Buscar
         '
         Me.btn_Buscar.Image = CType(resources.GetObject("btn_Buscar.Image"), System.Drawing.Image)
-        Me.btn_Buscar.Location = New System.Drawing.Point(546, 395)
+        Me.btn_Buscar.Location = New System.Drawing.Point(661, 410)
         Me.btn_Buscar.Name = "btn_Buscar"
         Me.btn_Buscar.Size = New System.Drawing.Size(36, 37)
         Me.btn_Buscar.TabIndex = 20
+        Me.btn_Buscar.Tag = "|"
         Me.btn_Buscar.UseVisualStyleBackColor = True
         '
         'btn_Limpiar
         '
         Me.btn_Limpiar.Image = CType(resources.GetObject("btn_Limpiar.Image"), System.Drawing.Image)
-        Me.btn_Limpiar.Location = New System.Drawing.Point(505, 395)
+        Me.btn_Limpiar.Location = New System.Drawing.Point(620, 410)
         Me.btn_Limpiar.Name = "btn_Limpiar"
         Me.btn_Limpiar.Size = New System.Drawing.Size(36, 37)
         Me.btn_Limpiar.TabIndex = 19
+        Me.btn_Limpiar.Tag = "|"
         Me.btn_Limpiar.UseVisualStyleBackColor = True
         '
         'DG_ConsultaProveedores
@@ -61,7 +63,7 @@ Partial Class Form_ConsultaProveedores
         Me.DG_ConsultaProveedores.Location = New System.Drawing.Point(12, 83)
         Me.DG_ConsultaProveedores.Name = "DG_ConsultaProveedores"
         Me.DG_ConsultaProveedores.ReadOnly = True
-        Me.DG_ConsultaProveedores.Size = New System.Drawing.Size(570, 306)
+        Me.DG_ConsultaProveedores.Size = New System.Drawing.Size(686, 321)
         Me.DG_ConsultaProveedores.TabIndex = 21
         '
         'tb_NombreFantasia
@@ -73,7 +75,7 @@ Partial Class Form_ConsultaProveedores
         '
         'tb_RazonSocial
         '
-        Me.tb_RazonSocial.Location = New System.Drawing.Point(361, 49)
+        Me.tb_RazonSocial.Location = New System.Drawing.Point(476, 49)
         Me.tb_RazonSocial.Name = "tb_RazonSocial"
         Me.tb_RazonSocial.Size = New System.Drawing.Size(221, 20)
         Me.tb_RazonSocial.TabIndex = 35
@@ -90,7 +92,7 @@ Partial Class Form_ConsultaProveedores
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(285, 52)
+        Me.Label2.Location = New System.Drawing.Point(400, 52)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(70, 13)
         Me.Label2.TabIndex = 31
@@ -99,7 +101,7 @@ Partial Class Form_ConsultaProveedores
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(190, 16)
+        Me.Label1.Location = New System.Drawing.Point(251, 15)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(40, 13)
         Me.Label1.TabIndex = 38
@@ -108,7 +110,7 @@ Partial Class Form_ConsultaProveedores
         'DD_Codigo
         '
         Me.DD_Codigo.FormattingEnabled = True
-        Me.DD_Codigo.Location = New System.Drawing.Point(236, 13)
+        Me.DD_Codigo.Location = New System.Drawing.Point(297, 12)
         Me.DD_Codigo.Name = "DD_Codigo"
         Me.DD_Codigo.Size = New System.Drawing.Size(173, 21)
         Me.DD_Codigo.TabIndex = 39
@@ -117,7 +119,7 @@ Partial Class Form_ConsultaProveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(596, 438)
+        Me.ClientSize = New System.Drawing.Size(713, 459)
         Me.Controls.Add(Me.DD_Codigo)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.tb_NombreFantasia)

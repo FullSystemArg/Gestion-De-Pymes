@@ -45,7 +45,6 @@ Public Class Form_Proveedores
         tb_CUIT.Text = ""
         tb_Domicilio.Text = ""
         tb_NombreFantasia.Text = ""
-        cb_Obligatoria.Checked = False
     End Sub
 
 #Region "ABM"

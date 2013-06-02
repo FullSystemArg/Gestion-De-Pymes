@@ -23,11 +23,8 @@ C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\bin\Debug\
 C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\bin\Debug\EnterpriseManagement.xml
 C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.Form_ConsultaProveedores.resources
-C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.Form_ConceptosFacturables.resources
 C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.Form_Proveedores.resources
 C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.Form_CuentasBancarias.resources
-C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.Form_Conceptos.resources
-C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.Form_Comprobantes.resources
 C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.Formulario.resources
 C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.Resources.resources
 C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\GenerateResource.read.1.tlog
@@ -35,3 +32,4 @@ C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\De
 C:\Documents and Settings\Administrador\Mis documentos\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.exe
 C:\Documents and Settings\Administrador\Mis documentos\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.xml
 C:\Documents and Settings\Administrador\Mis documentos\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.pdb
+C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.Form_Articulos.resources

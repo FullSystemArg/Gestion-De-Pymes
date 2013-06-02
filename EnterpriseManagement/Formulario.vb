@@ -1,27 +1,5 @@
 ﻿Public Class Formulario
 
-    Private Sub ComprobantesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        If Int_VentanaFondos_Comprobantes = 0 Then
-            Dim Frm_Comprobantes As New Form_Comprobantes
-            Frm_Comprobantes.MdiParent = Me
-            Frm_Comprobantes.Show()
-            Int_VentanaFondos_Comprobantes = 1
-        Else
-            Mensaje(1)
-        End If
-    End Sub
-
-    Private Sub ConceptosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        If Int_VentanaFondos_Conceptos = 0 Then
-            Dim frm_Conceptos As New Form_Conceptos
-            frm_Conceptos.MdiParent = Me
-            frm_Conceptos.Show()
-            Int_VentanaFondos_Conceptos = 1
-        Else
-            Mensaje(1)
-        End If
-    End Sub
-
     Private Sub CuentasBancariasFondosFIjosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CuentasBancariasFondosFIjosToolStripMenuItem.Click
         If Int_VentanaFondos_CuentasBancarias = 0 Then
             Dim Frm_CuentasBancarias As New Form_CuentasBancarias

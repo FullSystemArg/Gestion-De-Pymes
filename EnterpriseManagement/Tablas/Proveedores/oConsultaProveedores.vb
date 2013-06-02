@@ -51,7 +51,4 @@ Public Class oConsultaProveedores
 
 #End Region
 
-#Region "Conceptos"
-
-#End Region
 End Class
