@@ -1,6 +1,6 @@
 ﻿Public Class Form_CuentasBancarias
     Dim strBanco, strNro, strCBU, strTipo, strMoneda, strInactivo, strTipoFondoFijo As String
-
+    'Estas son las variables
     Sub LimpiarCampos()
         tb_CBU.Text = ""
         tb_Nro.Text = ""
