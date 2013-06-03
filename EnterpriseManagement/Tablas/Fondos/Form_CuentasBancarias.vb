@@ -10,14 +10,14 @@
         DD_Moneda.Text = ""
         DD_Tipo.Text = ""
     End Sub
-
+    'jojojo
     Sub CargarDatos()
         oCuentasBancarias.CargarDG_CuentasBancarias(DG_CuentasBancarias)
         oCuentasBancarias.CargarDD_Banco(DD_Banco)
         oCuentasBancarias.CargarDD_Tipo(DD_Tipo)
         oCuentasBancarias.CargarDD_Moneda(DD_Moneda)
     End Sub
-
+    'todos son putos
     Sub MostrarDatosDG()
         strBanco = DG_CuentasBancarias.CurrentRow.Cells(0).EditedFormattedValue.ToString
         strNro = DG_CuentasBancarias.CurrentRow.Cells(1).EditedFormattedValue.ToString
@@ -38,7 +38,7 @@
         Else
             cb_Inactiva.Checked = False
         End If
-
+        'vos
         If strTipoFondoFijo <> "N" Then
             cb_TipoFondoFijo.Checked = True
         Else
