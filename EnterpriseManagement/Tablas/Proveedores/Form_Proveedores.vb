@@ -14,6 +14,10 @@ Public Class Form_Proveedores
         End If
     End Sub
 
+    Private Sub tb_Numero_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles tb_Numero.KeyPress
+        If Not IsNumeric(e.KeyChar) And e.KeyChar <> Chr(8) Then e.KeyChar = String.Empty
+    End Sub
+
     Public Sub Form_Proveedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         PonerUltimoNumero()
         If Im = 1 Then
@@ -76,5 +80,6 @@ Public Class Form_Proveedores
     End Sub
 
 #End Region
+
 
 End Class

@@ -33,3 +33,18 @@ C:\Documents and Settings\Administrador\Mis documentos\GitHub\Gestion-De-Pymes\E
 C:\Documents and Settings\Administrador\Mis documentos\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.xml
 C:\Documents and Settings\Administrador\Mis documentos\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.pdb
 C:\Users\DAVID\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.Form_Articulos.resources
+C:\Users\Daniela\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.exe
+C:\Users\Daniela\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.xml
+C:\Users\Daniela\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.pdb
+C:\Users\Daniela\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\bin\Debug\EnterpriseManagement.exe
+C:\Users\Daniela\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\bin\Debug\EnterpriseManagement.pdb
+C:\Users\Daniela\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\bin\Debug\EnterpriseManagement.xml
+C:\Users\Daniela\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Daniela\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.Form_Articulos.resources
+C:\Users\Daniela\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.Form_ConsultaProveedores.resources
+C:\Users\Daniela\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.Form_Proveedores.resources
+C:\Users\Daniela\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.Form_CuentasBancarias.resources
+C:\Users\Daniela\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.Formulario.resources
+C:\Users\Daniela\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\EnterpriseManagement.Resources.resources
+C:\Users\Daniela\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Daniela\Documents\GitHub\Gestion-De-Pymes\EnterpriseManagement\obj\x86\Debug\GenerateResource.write.1.tlog
