@@ -2,15 +2,20 @@
 
 Public Class Form_ConsultaProveedores
 
+#Region "Load_Unload"
+
     Private Sub Form_ConceptosFacturables_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
-        Int_VentanaConsultas_ConsultaProveedores = 0
+        Int_VentanaProveedores_ConsultaProveedores = 0
         ImeC = 0
     End Sub
 
-    Private Sub btn_Buscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Buscar.Click
-        Dim Cadena As String = FiltroSQL()
-        oConsultaProveedores.CargarDG_ConsultaProveedores(DG_ConsultaProveedores, Cadena)
+    Private Sub Form_ConsultaProveedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        oConsultaProveedores.CargarDD_Codigo(DD_Codigo)
     End Sub
+
+#End Region
+
+#Region "Funciones"
 
     Public Function FiltroSQL()
         Dim SQLstring As String = ""
@@ -41,10 +46,6 @@ Public Class Form_ConsultaProveedores
         Return SQLstring
     End Function
 
-    Private Sub Form_ConsultaProveedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        oConsultaProveedores.CargarDD_Codigo(DD_Codigo)
-    End Sub
-
     Private Sub btn_Limpiar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Limpiar.Click
         tb_NombreFantasia.Text = ""
         tb_RazonSocial.Text = ""
@@ -53,8 +54,19 @@ Public Class Form_ConsultaProveedores
         ImeC = 0
     End Sub
 
+#End Region
+
+#Region "ABM"
+
+    Private Sub btn_Buscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Buscar.Click
+        Dim Cadena As String = FiltroSQL()
+        oConsultaProveedores.CargarDG_ConsultaProveedores(DG_ConsultaProveedores, Cadena)
+    End Sub
+
     Private Sub DG_ConsultaProveedores_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DG_ConsultaProveedores.DoubleClick
         oConsultaProveedores.MostrarProveedor(DG_ConsultaProveedores)
     End Sub
+
+#End Region
 
 End Class

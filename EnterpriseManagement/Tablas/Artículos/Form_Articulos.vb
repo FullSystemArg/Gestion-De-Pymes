@@ -1,8 +1,5 @@
 ﻿Public Class Form_Articulos
-    'holaaaaaa soy la notebook
-
-    Private Sub Form_Articulos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        MsgBox("hola")
-        MsgBox("fdsafdsfas")
+    Private Sub Form_ConceptosFacturables_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        Int_VentanaStock_Articulos = 0
     End Sub
 End Class

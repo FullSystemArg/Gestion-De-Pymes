@@ -96,13 +96,13 @@ Partial Class Formulario
         'ArticulosToolStripMenuItem
         '
         Me.ArticulosToolStripMenuItem.Name = "ArticulosToolStripMenuItem"
-        Me.ArticulosToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.ArticulosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ArticulosToolStripMenuItem.Text = "Articulos"
         '
         'AltaDeStockToolStripMenuItem
         '
         Me.AltaDeStockToolStripMenuItem.Name = "AltaDeStockToolStripMenuItem"
-        Me.AltaDeStockToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.AltaDeStockToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AltaDeStockToolStripMenuItem.Text = "Consulta Stock"
         '
         'AdministracionToolStripMenuItem

@@ -17,11 +17,22 @@
     End Sub
 
     Public Sub ConsultaProveedoresToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConsultaProveedoresToolStripMenuItem1.Click
-        If Int_VentanaConsultas_ConsultaProveedores = 0 Then
+        If Int_VentanaProveedores_ConsultaProveedores = 0 Then
             Dim Frm_ConsultaProveedores As New Form_ConsultaProveedores
             Frm_ConsultaProveedores.MdiParent = Me
             Frm_ConsultaProveedores.Show()
-            Int_VentanaConsultas_ConsultaProveedores = 1
+            Int_VentanaProveedores_ConsultaProveedores = 1
+        Else
+            Mensaje(1)
+        End If
+    End Sub
+
+    Private Sub ArticulosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ArticulosToolStripMenuItem.Click
+        If Int_VentanaStock_Articulos = 0 Then
+            Dim Frm_Articulos As New Form_Articulos
+            Frm_Articulos.MdiParent = Me
+            Frm_Articulos.Show()
+            Int_VentanaStock_Articulos = 1
         Else
             Mensaje(1)
         End If

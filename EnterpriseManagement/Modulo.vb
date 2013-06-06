@@ -4,7 +4,8 @@
     Public Msg As String
     Public Tbnumero As String
     Public Int_VentanaProveedores_Proveedores As Integer = 0
-    Public Int_VentanaConsultas_ConsultaProveedores As Integer = 0
+    Public Int_VentanaProveedores_ConsultaProveedores As Integer = 0
+    Public Int_VentanaStock_Articulos As Integer = 0
 
     'Variables para Proveedores
     Public ImeC As Integer
