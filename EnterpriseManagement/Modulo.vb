@@ -32,6 +32,8 @@
                 Msg = MsgBox("Esta seguro que desea grabar el nuevo Registro: " & Tbnumero & " de la tabla PROVEEDORES", vbOKCancel, "Enterprise Management")
             Case Is = 6
                 Msg = MsgBox("Esta seguro que desea eliminar el Registro: " & Tbnumero & " de la tabla PROVEEDORES", vbOKCancel, "Enterprise Management")
+            Case Is = 7
+                Msg = MsgBox("Se eliminó el registro" & Tbnumero & " de la tabla PROVEEDORES", vbInformation, "Enterprise Management")
         End Select
     End Sub
 

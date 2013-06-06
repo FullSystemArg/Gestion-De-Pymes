@@ -5,9 +5,7 @@ Public Class oConsultaProveedores
 #Region "Consultas"
 
     Shared Sub CargarDD_Codigo(ByVal DD As ComboBox)
-        Dim strSQL As New SqlDataAdapter("Select NUM_PROV From PROVEEDORES", SQLProvider.ConnectionString), ds As New DataSet
-        strSQL.Fill(ds)
-        DD.DataSource = ds.Tables(0)
+        DD.DataSource = SqlHelper.ExecuteDataset(SQLProvider.ConnectionString, CommandType.Text, "Select NUM_PROV From PROVEEDORES").Tables(0)
         DD.DisplayMember = "NUM_PROV"
         DD.ValueMember = "NUM_PROV"
         DD.Text = ""
@@ -25,7 +23,8 @@ Public Class oConsultaProveedores
             strRazon = DG.CurrentRow.Cells(1).EditedFormattedValue.ToString
             strFantasia = DG.CurrentRow.Cells(2).EditedFormattedValue.ToString
             strDomicilio = DG.CurrentRow.Cells(3).EditedFormattedValue.ToString
-            strCUIT = DG.CurrentRow.Cells(4).EditedFormattedValue.ToString
+            strCP = DG.CurrentRow.Cells(4).EditedFormattedValue.ToString
+            strCUIT = DG.CurrentRow.Cells(5).EditedFormattedValue.ToString
             strEstado = DG.CurrentRow.Cells(6).EditedFormattedValue.ToString
             Im = 1
             Formulario.ProveedoresToolStripMenuItem3_Click(Nothing, Nothing)
@@ -39,11 +38,12 @@ Public Class oConsultaProveedores
     Shared Sub Eliminar_Proveedor(ByVal Tnumero As TextBox, ByVal DgD As DataGridView)
         If Tnumero.Text <> "" Then
             LimpiarDG(DgD)
-            DgD.DataSource = SqlHelper.ExecuteDataset(SQLProvider.ConnectionString, CommandType.Text, ("Select NUM_PROV from PROVEEDORES where NUM_PROV = " & Trim(Tnumero))).Tables(0)
+            DgD.DataSource = SqlHelper.ExecuteDataset(SQLProvider.ConnectionString, CommandType.Text, ("Select NUM_PROV from PROVEEDORES where NUM_PROV = " & Trim(Tnumero.Text))).Tables(0)
             If DgD.Rows.Count > 0 Then
                 Mensaje(6)
-                If Msg = vbOK Then SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, "Delete From PROVEEDORES Where NUM_PROV = '" & Trim(Tnumero) & "'")
+                If Msg = vbOK Then SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, "Delete From PROVEEDORES Where NUM_PROV = '" & Trim(Tnumero.Text) & "'")
             End If
+            Mensaje(7)
         Else
             Mensaje(3)
         End If

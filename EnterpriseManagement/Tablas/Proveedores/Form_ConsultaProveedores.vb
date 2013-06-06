@@ -15,14 +15,14 @@ Public Class Form_ConsultaProveedores
     Public Function FiltroSQL()
         Dim SQLstring As String = ""
         If Trim(DD_Codigo.Text) <> "" Then
-            SQLstring = "Select NUM_PROV, RAZON, NOM_FANTASIA, DOMICILIO, CUIT, ESTADO From PROVEEDORES where NUM_PROV = " & Val(DD_Codigo.Text)
+            SQLstring = "Select NUM_PROV, RAZON, NOM_FANTASIA, DOMICILIO, CP, CUIT, ESTADO From PROVEEDORES where NUM_PROV = " & Val(DD_Codigo.Text)
         End If
 
         If Trim(tb_NombreFantasia.Text) <> "" Then
             If Trim(SQLstring) <> "" Then
                 SQLstring = SQLstring & " and NOM_FANTASIA Like '%" & Trim(tb_NombreFantasia.Text) & "%'"
             Else
-                SQLstring = "Select NUM_PROV, RAZON, NOM_FANTASIA, DOMICILIO, CUIT, ESTADO From PROVEEDORES where NOM_FANTASIA Like '%" & Trim(tb_NombreFantasia.Text) & "%'"
+                SQLstring = "Select NUM_PROV, RAZON, NOM_FANTASIA, DOMICILIO, CP, CUIT, ESTADO From PROVEEDORES where NOM_FANTASIA Like '%" & Trim(tb_NombreFantasia.Text) & "%'"
             End If
         End If
 
@@ -30,12 +30,12 @@ Public Class Form_ConsultaProveedores
             If Trim(SQLstring) <> "" Then
                 SQLstring = SQLstring & " and RAZON like '%" & Trim(tb_RazonSocial.Text) & "%'"
             Else
-                SQLstring = "Select NUM_PROV, RAZON, NOM_FANTASIA, DOMICILIO, CUIT, ESTADO From PROVEEDORES where RAZON Like '%" & Trim(tb_RazonSocial.Text) & "%'"
+                SQLstring = "Select NUM_PROV, RAZON, NOM_FANTASIA, DOMICILIO, CP, CUIT, ESTADO From PROVEEDORES where RAZON Like '%" & Trim(tb_RazonSocial.Text) & "%'"
             End If
         End If
 
         If Trim(SQLstring) = "" Then
-            SQLstring = "Select NUM_PROV, RAZON, NOM_FANTASIA, DOMICILIO, CUIT, ESTADO From PROVEEDORES"
+            SQLstring = "Select NUM_PROV, RAZON, NOM_FANTASIA, DOMICILIO, CP, CUIT, ESTADO From PROVEEDORES"
         End If
 
         Return SQLstring
