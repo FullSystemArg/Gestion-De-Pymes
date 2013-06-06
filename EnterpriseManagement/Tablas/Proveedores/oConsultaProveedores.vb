@@ -36,8 +36,8 @@ Public Class oConsultaProveedores
 
 #Region "Proveedores"
 
-    Shared Sub Eliminar_Proveedor(ByVal Tnumero As Integer, ByVal DgD As DataGridView)
-        If Tnumero <> "" Then
+    Shared Sub Eliminar_Proveedor(ByVal Tnumero As TextBox, ByVal DgD As DataGridView)
+        If Tnumero.Text <> "" Then
             LimpiarDG(DgD)
             DgD.DataSource = SqlHelper.ExecuteDataset(SQLProvider.ConnectionString, CommandType.Text, ("Select NUM_PROV from PROVEEDORES where NUM_PROV = " & Trim(Tnumero))).Tables(0)
             If DgD.Rows.Count > 0 Then

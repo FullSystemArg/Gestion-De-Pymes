@@ -54,8 +54,7 @@ Public Class Form_Proveedores
 #Region "ABM"
 
     Private Sub btn_Eliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Eliminar.Click
-        Dim TNumero As Integer = tb_Numero.Text
-        oConsultaProveedores.Eliminar_Proveedor(TNumero, DgD)
+        oConsultaProveedores.Eliminar_Proveedor(tb_Numero, DgD)
     End Sub
 
     Private Sub btn_Grabar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Grabar.Click
