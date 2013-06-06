@@ -3,13 +3,15 @@
     'Variables Generales
     Public Msg As String
     Public Tbnumero As String
-    Public Int_VentanaFondos_CuentasBancarias As Integer = 0
     Public Int_VentanaProveedores_Proveedores As Integer = 0
     Public Int_VentanaConsultas_ConsultaProveedores As Integer = 0
 
     'Variables para Proveedores
     Public ImeC As Integer
     Public Im As Integer
+    Public strCadena_Proveedor As String
+    Public strAlta_Proveedor As String
+    Public strMod_Proveedor As String
     Public strNumero As String
     Public strRazon As String
     Public strFantasia As String
@@ -34,6 +36,8 @@
                 Msg = MsgBox("Esta seguro que desea eliminar el Registro: " & Tbnumero & " de la tabla PROVEEDORES", vbOKCancel, "Enterprise Management")
             Case Is = 7
                 Msg = MsgBox("Se eliminó el registro" & Tbnumero & " de la tabla PROVEEDORES", vbInformation, "Enterprise Management")
+            Case Is = 8
+                Msg = MsgBox("Se grabo correctamente el registro" & Tbnumero & " en la tabla PROVEEDORES", vbInformation, "Enterprise Management")
         End Select
     End Sub
 

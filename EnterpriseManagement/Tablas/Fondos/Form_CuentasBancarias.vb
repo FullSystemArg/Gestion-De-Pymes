@@ -46,10 +46,6 @@
         End If
     End Sub
 
-    Private Sub Form_Comprobantes_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
-        Int_VentanaFondos_CuentasBancarias = 0
-    End Sub
-
     Private Sub Form_CuentasBancarias_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         CargarDatos()
     End Sub
@@ -76,5 +72,9 @@
             oCuentasBancarias.CargarDG_CuentasBancarias(DG_CuentasBancarias)
             LimpiarCampos()
         End If
+    End Sub
+
+    Private Sub btn_Grabar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Grabar.Click
+
     End Sub
 End Class

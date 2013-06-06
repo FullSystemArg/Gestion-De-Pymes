@@ -55,6 +55,10 @@ Public Class Form_Proveedores
 
     Private Sub btn_Limpiar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Limpiar.Click
         PonerUltimoNumero()
+        Limpiar_Campos()
+    End Sub
+
+    Sub Limpiar_Campos()
         tb_RazonSocial.Text = ""
         tb_Cp.Text = ""
         tb_CUIT.Text = ""
@@ -69,29 +73,23 @@ Public Class Form_Proveedores
     Private Sub btn_Eliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Eliminar.Click
         Tbnumero = tb_Numero.Text
         oConsultaProveedores.Eliminar_Proveedor(tb_Numero, DgD)
+        PonerUltimoNumero()
+        Limpiar_Campos()
     End Sub
 
     Private Sub btn_Grabar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Grabar.Click
         If tb_Numero.Text <> "" Then
             Tbnumero = tb_Numero.Text
-            Dim Cadena As String = ("Select NUM_PROV from PROVEEDORES where NUM_PROV = " & Val(tb_Numero.Text))
-            Dim strSQLAlta As String = "INSERT INTO PROVEEDORES " _
+            strCadena_Proveedor = ("Select NUM_PROV from PROVEEDORES where NUM_PROV = " & Val(tb_Numero.Text))
+            strAlta_Proveedor = "INSERT INTO PROVEEDORES " _
                                         & "(NUM_PROV, RAZON, NOM_FANTASIA, DOMICILIO, CUIT, ESTADO) VALUES " _
                                         & "(" & Val(tb_Numero.Text) & ",'" & Trim(tb_RazonSocial.Text) & "','" & Trim(tb_NombreFantasia.Text) & "','" _
                                         & Trim(tb_Domicilio.Text) & "','" & Trim(tb_CUIT.Text) & "','" & Trim(DD_Estado.Text) & "');"
-            Dim strSQLMod As String = "UPDATE PROVEEDORES SET NUM_PROV = " & Val(tb_Numero.Text) & ", RAZON = '" & Trim(tb_RazonSocial.Text) _
+            strMod_Proveedor = "UPDATE PROVEEDORES SET NUM_PROV = " & Val(tb_Numero.Text) & ", RAZON = '" & Trim(tb_RazonSocial.Text) _
                                       & "', NOM_FANTASIA = '" & Trim(tb_NombreFantasia.Text) & "', DOMICILIO = '" & Trim(tb_Domicilio.Text) _
                                       & "', CUIT = '" & Trim(tb_CUIT.Text) & "', ESTADO = '" & Trim(DD_Estado.Text) & "' WHERE NUM_PROV = " _
                                       & Val(tb_Numero.Text)
-            LimpiarDG(DgD)
-            DgD.DataSource = SqlHelper.ExecuteDataset(SQLProvider.ConnectionString, CommandType.Text, Cadena).Tables(0)
-            If DgD.Rows.Count > 0 Then
-                Mensaje(4)
-                If Msg = vbOK Then SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, strSQLMod)
-            Else
-                Mensaje(5)
-                If Msg = vbOK Then SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, strSQLAlta)
-            End If
+            oConsultaProveedores.Grabar_Proveedor(DgD)
         Else
             Mensaje(3)
         End If

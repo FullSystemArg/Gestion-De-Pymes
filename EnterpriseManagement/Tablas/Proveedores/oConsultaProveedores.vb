@@ -49,6 +49,19 @@ Public Class oConsultaProveedores
         End If
     End Sub
 
+    Shared Sub Grabar_Proveedor(ByVal DgD As DataGridView)
+        LimpiarDG(DgD)
+        DgD.DataSource = SqlHelper.ExecuteDataset(SQLProvider.ConnectionString, CommandType.Text, strCadena_Proveedor).Tables(0)
+        If DgD.Rows.Count > 0 Then
+            Mensaje(4)
+            If Msg = vbOK Then SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, strAlta_Proveedor)
+        Else
+            Mensaje(5)
+            If Msg = vbOK Then SqlHelper.ExecuteNonQuery(SQLProvider.ConnectionString, CommandType.Text, strMod_Proveedor)
+        End If
+        Mensaje(8)
+    End Sub
+
 #End Region
 
 End Class

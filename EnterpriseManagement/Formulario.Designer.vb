@@ -25,8 +25,6 @@ Partial Class Formulario
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Formulario))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.TablasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FondosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CuentasBancariasFondosFIjosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultaProveedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -58,23 +56,10 @@ Partial Class Formulario
         '
         'TablasToolStripMenuItem
         '
-        Me.TablasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FondosToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.VentasToolStripMenuItem, Me.StockToolStripMenuItem, Me.AdministracionToolStripMenuItem})
+        Me.TablasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProveedoresToolStripMenuItem, Me.VentasToolStripMenuItem, Me.StockToolStripMenuItem, Me.AdministracionToolStripMenuItem})
         Me.TablasToolStripMenuItem.Name = "TablasToolStripMenuItem"
         Me.TablasToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
         Me.TablasToolStripMenuItem.Text = "Tablas"
-        '
-        'FondosToolStripMenuItem
-        '
-        Me.FondosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CuentasBancariasFondosFIjosToolStripMenuItem})
-        Me.FondosToolStripMenuItem.Name = "FondosToolStripMenuItem"
-        Me.FondosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.FondosToolStripMenuItem.Text = "Fondos"
-        '
-        'CuentasBancariasFondosFIjosToolStripMenuItem
-        '
-        Me.CuentasBancariasFondosFIjosToolStripMenuItem.Name = "CuentasBancariasFondosFIjosToolStripMenuItem"
-        Me.CuentasBancariasFondosFIjosToolStripMenuItem.Size = New System.Drawing.Size(233, 22)
-        Me.CuentasBancariasFondosFIjosToolStripMenuItem.Text = "Cuentas Bancarias / Fondos Fijos"
         '
         'ProveedoresToolStripMenuItem
         '
@@ -111,13 +96,13 @@ Partial Class Formulario
         'ArticulosToolStripMenuItem
         '
         Me.ArticulosToolStripMenuItem.Name = "ArticulosToolStripMenuItem"
-        Me.ArticulosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ArticulosToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.ArticulosToolStripMenuItem.Text = "Articulos"
         '
         'AltaDeStockToolStripMenuItem
         '
         Me.AltaDeStockToolStripMenuItem.Name = "AltaDeStockToolStripMenuItem"
-        Me.AltaDeStockToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AltaDeStockToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.AltaDeStockToolStripMenuItem.Text = "Consulta Stock"
         '
         'AdministracionToolStripMenuItem
@@ -204,7 +189,6 @@ Partial Class Formulario
     Friend WithEvents TablasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents HerramientasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AyudaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents FondosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ProveedoresToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VentasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StockToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -216,7 +200,6 @@ Partial Class Formulario
     Friend WithEvents VisorDeActividadesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AcercaDeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TemasDeAyudaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents CuentasBancariasFondosFIjosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ProveedoresToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConsultaProveedoresToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ArticulosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

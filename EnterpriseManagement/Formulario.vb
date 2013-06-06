@@ -1,16 +1,4 @@
 ﻿Public Class Formulario
-
-    Private Sub CuentasBancariasFondosFIjosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CuentasBancariasFondosFIjosToolStripMenuItem.Click
-        If Int_VentanaFondos_CuentasBancarias = 0 Then
-            Dim Frm_CuentasBancarias As New Form_CuentasBancarias
-            Frm_CuentasBancarias.MdiParent = Me
-            Frm_CuentasBancarias.Show()
-            Int_VentanaFondos_CuentasBancarias = 1
-        Else
-            Mensaje(1)
-        End If
-    End Sub
-
     Public Sub ProveedoresToolStripMenuItem3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProveedoresToolStripMenuItem3.Click
         Dim Frm_Proveedores As New Form_Proveedores
         If Int_VentanaProveedores_Proveedores = 0 Then
@@ -38,5 +26,4 @@
             Mensaje(1)
         End If
     End Sub
-
 End Class
