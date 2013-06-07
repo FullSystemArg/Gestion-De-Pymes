@@ -106,6 +106,7 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Tablas\Artículos\oArticulos.vb" />
     <Compile Include="Tablas\Artículos\Form_Articulos.Designer.vb">
       <DependentUpon>Form_Articulos.vb</DependentUpon>
     </Compile>
